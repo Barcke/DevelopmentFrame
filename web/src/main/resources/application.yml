@@ -1,0 +1,21 @@
+server:
+#  devtools:
+#    restart:
+#      enabled: true
+#      additional-paths: src/main/java
+#      exclude: classpath://static/**,/**
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+        cors:
+          allowed-origins: "*"
+          allowed-methods: "*"
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 500MB
+      max-file-size: 500MB

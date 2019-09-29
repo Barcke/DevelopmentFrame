@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.viponetech.mappers.FirmMapper">
+  <resultMap id="BaseResultMap" type="com.viponetech.pojo.Firm">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="intro" jdbcType="VARCHAR" property="intro" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="profession" jdbcType="VARCHAR" property="profession" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="modification" jdbcType="TIMESTAMP" property="modification" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="ext_str" jdbcType="VARCHAR" property="extStr" />
+    <result column="ext_int" jdbcType="INTEGER" property="extInt" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/undetermined?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+mybatis:
+  type-aliases-package: com.viponetech.pojo
+  #  mapper-locations: classpath:mappers/*.xml
+  call-setters-on-nulls: true
+  configuration:
+    default-executor-type: simple
+mapper:
+  mappers: com.viponetech.base.BaseMapper
+  not-empty: false
+  identity: MYSQL
+logging:
+  level:
+    com.viponetech.mapper : debug

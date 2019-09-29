@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>developmentFrame.com</groupId>
+  <artifactId>web</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>web</name>
+
+  <parent>
+    <artifactId>developmentFrame</artifactId>
+    <groupId>developmentFrame.com</groupId>
+    <version>1.0</version>
+  </parent>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>developmentFrame.com</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>developmentFrame.com</groupId>
+      <artifactId>commons</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>developmentFrame.com</groupId>
+      <artifactId>annotation</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <!--ioUtil-->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.2</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>web</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>1.5.3.RELEASE</version>
+        <configuration>
+          <mainClass>com.viponetech.Main</mainClass>
+          <!--spring-boot-maven-plugin插件打包出来的jar不可以互相依赖 加入以下配置即可实现互相依赖-->
+          <classifier>exec</classifier>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
