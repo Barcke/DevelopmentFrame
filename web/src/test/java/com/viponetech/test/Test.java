@@ -2,7 +2,7 @@ package com.viponetech.test;
 
 import com.viponetech.Main;
 import com.viponetech.mappers.FirmMapper;
-import com.viponetech.util.Result;
+import com.viponetech.service.FirmService;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,9 +24,13 @@ public class Test {
     @SuppressWarnings("all")
     private FirmMapper firmMapper;
 
+    @Autowired
+    private FirmService firmService;
+
     @org.junit.Test
     public void test(){
-
-        new Result();
+        Long i=1L;
+        firmService.selectById(i);
+        System.out.println();
     }
 }

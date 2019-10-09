@@ -19,7 +19,7 @@
 
         <!-- 配置 tk.mybatis 插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.viponetech.base.BaseMapper"/>
+            <property name="mappers" value="com.viponetech.base.mapper.BaseMapper"/>
         </plugin>
 
         <!-- 配置数据库连接 -->

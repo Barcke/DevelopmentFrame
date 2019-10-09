@@ -1,4 +1,4 @@
-package com.viponetech.base;
+package com.viponetech.base.mapper;
 
 import tk.mybatis.mapper.common.ConditionMapper;
 import tk.mybatis.mapper.common.ExampleMapper;

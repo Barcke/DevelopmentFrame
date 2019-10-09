@@ -13,7 +13,7 @@ mybatis:
   configuration:
     default-executor-type: simple
 mapper:
-  mappers: com.viponetech.base.BaseMapper
+  mappers: com.viponetech.base.mapper.BaseMapper
   not-empty: false
   identity: MYSQL
 logging:
